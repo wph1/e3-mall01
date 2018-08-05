@@ -28,7 +28,7 @@ public class ItemController {
 	public TbItem findItemByID(@PathVariable Long itemId){
 		//调用service服务,根据id查询
 		TbItem item = itemService.findItemByID(itemId);
-			
+			System.out.println();
 		return item;
 	}
 
