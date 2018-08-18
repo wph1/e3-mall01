@@ -2,7 +2,7 @@ package cn.e3.pojo;
 
 import java.util.Date;
 
-public class TbItemDesc {
+public class TbItemDesc implements java.io.Serializable{
     private Long itemId;
 
     private Date created;

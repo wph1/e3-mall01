@@ -2,7 +2,7 @@ package cn.e3.pojo;
 
 import java.util.Date;
 
-public class TbItemParamItem {
+public class TbItemParamItem implements java.io.Serializable{
     private Long id;
 
     private Long itemId;

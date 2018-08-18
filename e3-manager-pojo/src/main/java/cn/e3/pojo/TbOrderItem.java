@@ -1,6 +1,6 @@
 package cn.e3.pojo;
 
-public class TbOrderItem {
+public class TbOrderItem implements java.io.Serializable{
     private String id;
 
     private String itemId;

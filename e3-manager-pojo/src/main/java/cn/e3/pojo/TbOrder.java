@@ -2,7 +2,7 @@ package cn.e3.pojo;
 
 import java.util.Date;
 
-public class TbOrder {
+public class TbOrder implements java.io.Serializable{
     private String orderId;
 
     private String payment;
