@@ -18,13 +18,27 @@
         <module>../e3-manager-pojo</module>
         <module>../e3-manager-interface</module>
     </modules>
-    <plugins>
-        <!-- 配置Tomcat插件 -->
+  <!--  <plugins>
+        &lt;!&ndash; 配置Tomcat插件 &ndash;&gt;
         <plugin>
             <groupId>org.apache.tomcat.maven</groupId>
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version>
         </plugin>
-    </plugins>
+    </plugins>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>8080</port>
+                    <!--吧tomcat项目直接发布到ROOT里面-->
+                    <path>/</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
