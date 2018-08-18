@@ -23,12 +23,12 @@ public class ItemController {
 	 * 返回值:Tbitem
 	 * 方法:findItemByID
 	 */
-	@RequestMapping(value = "/item/{itemId}")
+	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public TbItem findItemByID(@PathVariable Long itemId){
 		//调用service服务,根据id查询
 		TbItem item = itemService.findItemByID(itemId);
-			System.out.println();
+			
 		return item;
 	}
 
