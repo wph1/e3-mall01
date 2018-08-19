@@ -18,6 +18,13 @@
         <module>../e3-manager-pojo</module>
         <module>../e3-manager-interface</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.e3</groupId>
+            <artifactId>e3-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
   <!--  <plugins>
         &lt;!&ndash; 配置Tomcat插件 &ndash;&gt;
         <plugin>
