@@ -1,6 +1,8 @@
 package cn.e3.manager.controller;
 
+import cn.e3.pojo.TbItemDesc;
 import cn.e3.utils.DatagridPageBean;
+import cn.e3.utils.E3mallResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -46,6 +48,25 @@ public class ItemController {
 		//调用远程service服务对象方法,查询商品分页列表
 		DatagridPageBean pageBean = itemService.findItemList(page, rows);
 		return pageBean;
+	}
+	/**
+	 * 需求:保存商品表数据,商品描述表数据
+	 * 请求:/item/save
+	 * 参数:TbItem item,TbItemDesc itemDesc
+	 * 返回值:E3mallResult
+	 * 业务:
+	 * 商品id不能重复,必须保证商品id唯一性
+	 * 模式:
+	 * 1,redis+1
+	 * 2,数据库生成id
+	 * 3,时间+随机数(√)---- 毫秒+2位随机数(99)---每一个毫秒有10000
+	 */
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public E3mallResult saveItem(TbItem item, TbItemDesc itemDesc){
+		//调用远程service服务对象
+		E3mallResult result = itemService.saveItem(item, itemDesc);
+		return result;
 	}
 
 }
