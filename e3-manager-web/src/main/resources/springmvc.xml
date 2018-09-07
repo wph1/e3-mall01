@@ -46,4 +46,10 @@ http://www.springframework.org/schema/util/spring-util-4.0.xsd">
     <!-- 引用商品类目服务 -->
     <dubbo:reference interface="cn.e3.manager.service.ItemCatService"
                      id="itemCatService" timeout="1000000"/>
+    <!-- 引用广告分类目服务 -->
+    <dubbo:reference interface="cn.e3.content.service.ContentCategoryService"
+                     id="contentCategoryService" timeout="1000000"/>
+    <!-- 引用广告内容目服务 -->
+    <dubbo:reference interface="cn.e3.content.service.ContentService"
+                     id="contentService" timeout="1000000"/>
 </beans>
