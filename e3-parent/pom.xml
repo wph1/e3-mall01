@@ -7,6 +7,11 @@
     <groupId>cn.e3</groupId>
     <artifactId>e3-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../e3-content-web</module>
+        <module>../e3-portal-web</module>
+        <module>../e3-content</module>
+    </modules>
 
     <packaging>pom</packaging>
     <!--
